@@ -10,8 +10,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
         Import Pages
 ========================================*/
 import NavBar from './components/NavBar';
-import Profile from './components/MenuItems';
-import MenuItems from './components/MenuItems';
+import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
 
 
 
@@ -26,7 +25,7 @@ export default function App() {
       <Routes>
         <Route path="/*" element={<NavBar />} />
         {/* <Route path="/profile" element={<Profile />} /> */}
-        <Route path="/menuitems" element={<MenuItems />} />
+        <Route path="/menuitems" element={<MenuItemsPage />} />
         </Routes>
   </div>
   )
