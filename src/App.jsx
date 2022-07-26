@@ -12,8 +12,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import NavBar from './components/NavBar';
 import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
 import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
-
-
+import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
 
 export default function App() {
   
@@ -22,11 +21,11 @@ export default function App() {
   
   return (
     <div className='App'>
-      <h1>TESTING</h1>
       <Routes>
         <Route path="/*" element={<NavBar />} />
         <Route path="/profile" element={<MyProfilePage />} />
         <Route path="/menuitems" element={<MenuItemsPage />} />
+        <Route path="/orders" element={<MyOrdersPage />} />
         </Routes>
   </div>
   )
