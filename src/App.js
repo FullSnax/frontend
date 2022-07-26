@@ -1,16 +1,28 @@
+/*========================================
+        Import Dependencies
+========================================*/
 import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Routes, Route, Navigate } from "react-router-dom"
+
+/*========================================
+        Import Pages
+========================================*/
+import NavBar from './components/NavBar';
 
 export default function App() {
   
-  const base_url = 'http://localhost:8000'
   const [details, setDetails] = useState([])
-  const [user, setUser] = useState("")
-  const [quote, setQuote] = useState("")
+  const [user, setUser] = useState([])
   
   return (
-    <h1>TESTING</h1>
+    <div className='App'>
+      <h1>TESTING</h1>
+      <Routes>
+        <Route path="/*" element={<NavBar />} />
+        </Routes>
+  </div>
   )
 }
 
