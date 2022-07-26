@@ -37,7 +37,8 @@ export default function MenuItemsPage() {
 			.catch((err) => {});
 	}
 
-	useEffect(() => {
+  useEffect((e) => {
+  
 		componentDidMount();
 	}, []);
 

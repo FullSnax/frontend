@@ -11,6 +11,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 ========================================*/
 import NavBar from './components/NavBar';
 import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
+import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 
 
 
@@ -24,7 +25,7 @@ export default function App() {
       <h1>TESTING</h1>
       <Routes>
         <Route path="/*" element={<NavBar />} />
-        {/* <Route path="/profile" element={<Profile />} /> */}
+        <Route path="/profile" element={<MyProfilePage />} />
         <Route path="/menuitems" element={<MenuItemsPage />} />
         </Routes>
   </div>
