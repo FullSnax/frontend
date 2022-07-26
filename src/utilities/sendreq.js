@@ -9,7 +9,6 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
 		options.body = JSON.stringify(payload);
 	}
 	const res = await axios(url, options);
-	if (res.ok) return res.json();
 	// res.ok will be false if the status code set to 4xx in the controller action
-	throw new Error('Bad Request');
+	return res.data
 }
