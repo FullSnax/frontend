@@ -11,7 +11,8 @@ export default function MenuItems({ menuItems }) {
 						<h2>{item.name}</h2>
 						<p>{item.description}</p>
 						<p>${item.price}</p>
-						<img src={item.image} alt="" />
+            <img src={item.image} alt="" />
+            <button>Add to Order</button>
 					</div>
 				</>
 			))}

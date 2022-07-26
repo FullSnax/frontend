@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className='App'>
       <Routes>
-        <Route path="/*" element={<NavBar />} />
+        <Route path="/" element={<NavBar />} />
         <Route path="/profile" element={<MyProfilePage />} />
         <Route path="/menuitems" element={<MenuItemsPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
