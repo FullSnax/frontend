@@ -10,6 +10,9 @@ import { Routes, Route, Navigate } from "react-router-dom"
         Import Pages
 ========================================*/
 import NavBar from './components/NavBar';
+import Profile from './components/Profile';
+
+
 
 export default function App() {
   
@@ -21,6 +24,7 @@ export default function App() {
       <h1>TESTING</h1>
       <Routes>
         <Route path="/*" element={<NavBar />} />
+        <Route path="/profile" element={<Profile />} />
         </Routes>
   </div>
   )
