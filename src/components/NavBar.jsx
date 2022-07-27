@@ -26,8 +26,8 @@ export default function NavBar() {
 								About
 							</ReactBootStrap.Nav.Link>
 						</Link>
-						<Link to="/">
-							<ReactBootStrap.Nav.Link href="/">
+						<Link to="/menu">
+							<ReactBootStrap.Nav.Link href="#menu">
 								Home
 							</ReactBootStrap.Nav.Link>
 						</Link>
