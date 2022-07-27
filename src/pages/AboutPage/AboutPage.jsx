@@ -1,11 +1,13 @@
 import React from 'react';
 import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 
 export default function AboutPage() {
+	
 	return (
 		<>
 			<NavBar />
-			<h1>AboutPage</h1>
+			<h1>About</h1>
 			<div className="about">
 				<p>
 					Welcome! We have many different meals and categories
@@ -15,6 +17,7 @@ export default function AboutPage() {
 					Have a great day!
 				</p>
 			</div>
+			<Footer />
 		</>
 	);
 }
