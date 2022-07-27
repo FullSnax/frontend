@@ -35,7 +35,7 @@ export default function NavBar() {
 					<ReactBootStrap.Nav>
 						<Link to="/profile">
 							<ReactBootStrap.Nav.Link href="#profile">
-								My Profile
+								View Profile
 							</ReactBootStrap.Nav.Link>
 						</Link>
 						<Link to="/orders">

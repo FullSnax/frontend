@@ -1,11 +1,10 @@
 import React from 'react'
 import NavBar from '../../components/NavBar'
 import './MyProfilePage.css'
-
-<div>
-    <NavBar />
-      <h1>My Profile</h1>
-    </div>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+library.add(faFacebookF, faTwitter, faInstagram);
 
 export default function MyProfilePage() {
   
@@ -53,9 +52,9 @@ export default function MyProfilePage() {
                   </div>
                 </div>
                 <div className="d-flex justify-content-start">
-                  <a href="#!"><i className="fab fa-facebook-f fa-lg me-3"></i></a>
-                  <a href="#!"><i className="fab fa-twitter fa-lg me-3"></i></a>
-                  <a href="#!"><i className="fab fa-instagram fa-lg"></i></a>
+                <a className='icons' href='#!'><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
+                <a className='icons' href='#!'><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
+                <a className='icons' href="#!"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
                 </div>
               </div>
             </div>

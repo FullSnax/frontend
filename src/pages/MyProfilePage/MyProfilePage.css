@@ -12,3 +12,11 @@
   #body {
     background-color: #ada4a1;
   }
+
+  .icons {
+    color: blue;
+    font-size: 1.5em;
+    margin-left: 4vh;
+    padding: 3vh;
+    display: block;
+  }
