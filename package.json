@@ -39,5 +39,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://themealdb.com/api/json/v1/1/filter.php?c=Seafood/"
 }

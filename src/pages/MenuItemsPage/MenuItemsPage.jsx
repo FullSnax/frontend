@@ -1,32 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import MenuItemList from '../../components/MenuItemList';
 import axios from 'axios';
+import NavBar from '../../components/NavBar';
 
 export default function MenuItemsPage() {
-	const [menuItems, setMenuItems] = useState([]);
-	
-	function componentDidMount() {
-		console.log('it mounted');
-		let data;
-		axios.get('http://localhost:8000/api/menuitems/')
-			.then((res) => {
-				data = res.data;
-				// console.log(data);
-				setMenuItems(data);
-			})
-			.catch((err) => {});
-	}
+	const [menuItems, setMenuItems] = useState('');
 
-  useEffect((e) => {
-  
-		componentDidMount();
-	}, []);
+	const sendGetRequest = async () => {
+		try {
+			let data = await axios.get("https://themealdb.com/api/json/v1/1/filter.php?c=Seafood"),
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+				'Content-Type': 'application/json'
+			}
+        console.log(data);
+    } catch (err) {
+        // Handle Error Here
+        console.error(err);
+    }
+};
+
+sendGetRequest();
+
+	// useEffect((e) => {
+	// 	componentDidMount();
+	// }, []);
 
 	return (
 		<>
+			<NavBar />
 			<div className="container">
 				<h1>Menu</h1>
-        <MenuItemList menuItems={menuItems} />
+				<MenuItemList menuItems={menuItems} />
 			</div>
 		</>
 	);
