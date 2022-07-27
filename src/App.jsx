@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
 import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 export default function App() {
   
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/profile" element={<MyProfilePage />} />
         <Route path="/menu" element={<MenuItemsPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
+        <Route path="/about" element={<AboutPage />} />
         </Routes>
   </div>
   )
