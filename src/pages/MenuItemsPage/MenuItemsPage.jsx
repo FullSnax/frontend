@@ -3,6 +3,7 @@ import MenuItemList from '../../components/MenuItemList';
 import axios from 'axios';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
+import SearchBar from '../../components/SearchBar';
 
 export default function MenuItemsPage() {
 	const [menuItems, setMenuItems] = useState([]);
@@ -34,6 +35,7 @@ export default function MenuItemsPage() {
 			<NavBar />
 			<div className="container">
 				<h1>Menu</h1>
+				<SearchBar />
 				<MenuItemList menu={menuItems} />
 			</div>
 			<Footer />

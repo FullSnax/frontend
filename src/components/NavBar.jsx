@@ -40,7 +40,7 @@ export default function NavBar() {
 						</Link>
 						<Link to="/orders">
 							<ReactBootStrap.Nav.Link href="#orders" eventKey={2}>
-								My Orders
+								Orders
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>
