@@ -1,6 +1,11 @@
-#logo {
+#brand-logo {
 	font-size: 2.5em;
-	text-decoration: 4px dotted skyblue underline;
+	text-decoration: .15em dotted skyblue underline;
+}
+
+a.nav-link {
+	text-decoration: none;
+	color: whitesmoke
 }
 
 #footer {
@@ -52,7 +57,7 @@ h1 {
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #ada4a1;
+	background-color: #616364;
 }
 
 code {

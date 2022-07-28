@@ -1,25 +1,16 @@
-.food-title {
-  color: whitesmoke;
-}
-
 h1 {
   color: skyblue;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #250008;
-  font-family: sans-serif;
-}
 .card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 360px;
-  height: 400px;
+  width: 40vh;
   background: #000;
+  margin: 2vh;
+  border-radius: 50px;
 }
 .card .image {
   width: 100%;
@@ -33,6 +24,7 @@ body {
 .card:hover .image img {
   opacity: .5;
   transform: translateX(30%);/*100%*/
+  cursor: pointer;
 }
 .card .details {
   position: absolute;
@@ -47,6 +39,7 @@ body {
 }
 .card:hover .details {
   transform: perspective(2000px) rotateY(0deg);
+  cursor: pointer;
 }
 .card .details .center {
   padding: 20px;

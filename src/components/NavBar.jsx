@@ -11,11 +11,13 @@ export default function NavBar() {
 				bg="dark"
 				variant="dark"
 			>
-				<Link to="/">
-					<ReactBootStrap.Navbar.Brand id="logo" href="#">
+				{/* <Link to="/"> */}
+				<ReactBootStrap.Nav.Link to="/">
+					<ReactBootStrap.Navbar.Brand id="brand-logo" href="#about">
 						FullSnax
-					</ReactBootStrap.Navbar.Brand>
-				</Link>
+						</ReactBootStrap.Navbar.Brand>
+						</ReactBootStrap.Nav.Link>
+				{/* </Link> */}
 				<ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
 					<ReactBootStrap.Nav className="mr-auto">
