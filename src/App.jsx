@@ -29,6 +29,7 @@ export default function App() {
         <Route path="/menu" element={<MenuItemsPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
       <Footer />
   </div>

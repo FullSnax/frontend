@@ -30,7 +30,7 @@ export default function MyProfilePage() {
               <div className="card-body p-4">
                 <h6 className='profile-title'>My Profile</h6>
                 <hr className="mt-0 mb-4" />
-                <div className="row pt-1">
+                <div className="row pt-1 mt-5 p-0">
                   <div className="col-6 mb-3">
                     <h6>Email</h6>
                     <p className="text-muted">Jessica@gmail.com</p>
