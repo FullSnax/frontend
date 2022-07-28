@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
 import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
+import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import Footer from './components/Footer';
 
@@ -29,7 +30,7 @@ export default function App() {
         <Route path="/menu" element={<MenuItemsPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
       <Footer />
   </div>

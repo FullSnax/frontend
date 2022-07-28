@@ -3,12 +3,12 @@ import './MenuItemCard.css';
 
 export default function MenuItems({ meal }) {
 	return (
-		<div class="card">
-			<div class="image">
+		<div className="card">
+			<div className="image">
 				<img src={meal.strMealThumb} />
 			</div>
-			<div class="details">
-				<div class="center">
+			<div className="details">
+				<div className="center">
 					<h1>
 						Entree
 						<br />
