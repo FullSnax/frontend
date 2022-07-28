@@ -20,11 +20,11 @@ library.add(
 
 export default function Footer() {
 	return (
-		<footer className="bg-dark text-center text-white footer fixed-bottom">
+		<footer id="footer" className="bg-dark text-center text-white footer fixed-bottom">
 			<div className="container p-4 pb-0">
 				<section className="mb-4">
 					<a
-						className="btn btn-outline-light btn-floating m-1"
+						className="btn btn-outline-light btn-floating m-1 "
 						href="#!"
 						role="button"
 					>

@@ -3,6 +3,34 @@
 	text-decoration: 4px dotted skyblue underline;
 }
 
+#footer {
+	height: 2em;
+}
+
+.icon-footer {
+	
+}
+
+.btn.btn-outline-light.btn-floating.m-1 {
+	padding: 0px 5px 0px 5px;
+
+}
+
+.text-center.p-3 {
+	position: absolute;
+	margin-top: -3.5vh;
+	margin-left: 85%;
+	
+}
+
+.mb-4 {
+	padding: 0px;
+	position: absolute;
+	margin-left: -32vh;
+	margin-top: -2.5vh
+
+}
+
 .about {
  color:skyblue;
  font-weight: bold;
