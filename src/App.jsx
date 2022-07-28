@@ -14,6 +14,7 @@ import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
 import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
 import AboutPage from './pages/AboutPage/AboutPage';
+import Footer from './components/Footer';
 
 export default function App() {
   
@@ -22,13 +23,15 @@ export default function App() {
   
   return (
     <div className='App'>
+      <NavBar />
       <Routes>
         <Route path="/*" element={<NavBar />} />
         <Route path="/profile" element={<MyProfilePage />} />
         <Route path="/menu" element={<MenuItemsPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
-        </Routes>
+      </Routes>
+      <Footer />
   </div>
   )
 }

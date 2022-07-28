@@ -15,9 +15,10 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
 	return res.data;
 	// if (res.ok)
 	// throw new Error('Bad Request');
-	
+
 }
-export async function sendRequestAPI(url, method = 'GET', payload = null) {
+
+export async function mealsreqApi(url, method = 'GET', payload = null) {
 	let data;
 
 	const options = { method };
