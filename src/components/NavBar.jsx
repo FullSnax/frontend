@@ -28,7 +28,7 @@ export default function NavBar() {
 						</Link>
 						<Link to="/menu">
 							<ReactBootStrap.Nav.Link href="#menu">
-								Home
+								Menu
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>

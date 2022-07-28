@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from '../../components/NavBar'
+import Footer from '../../components/Footer'
 import './MyProfilePage.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -63,7 +64,8 @@ export default function MyProfilePage() {
       </div>
     </div>
   </div>
-</section>
+      </section>
+      <Footer />
 </>
     
   )

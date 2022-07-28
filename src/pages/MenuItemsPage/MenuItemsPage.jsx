@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MenuItemList from '../../components/MenuItemList';
 import axios from 'axios';
 import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 
 export default function MenuItemsPage() {
 	const [menuItems, setMenuItems] = useState([]);
@@ -16,7 +17,8 @@ export default function MenuItemsPage() {
 				'Access-Control-Allow-Headers':'application/json',
 			}
 			// console.log(res.data);
-			setMenuItems(res.data)
+			const menulist = res.data
+			setMenuItems(menulist.meals)
 		} catch (err) {
 			// Handle Error Here
 			console.error(err);
@@ -34,6 +36,7 @@ export default function MenuItemsPage() {
 				<h1>Menu</h1>
 				<MenuItemList menu={menuItems} />
 			</div>
-		</>
+			<Footer />
+			</>
 	);
 }
