@@ -3,8 +3,10 @@
 ========================================*/
 import './App.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState, useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom"
+import { AuthContext, AuthProvider } from "./context/AuthContext";
+import React, {Component} from "react";
 
 /*========================================
         Import Pages
@@ -24,6 +26,7 @@ export default function App() {
   
   return (
     <div className='App'>
+    <AuthProvider>
       <NavBar />
       <Routes>
         <Route path="/profile" element={<MyProfilePage />} />
@@ -31,7 +34,8 @@ export default function App() {
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
-      </Routes>
+        </Routes>
+      </AuthProvider>
       <Footer />
   </div>
   )
