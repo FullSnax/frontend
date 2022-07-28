@@ -1,5 +1,5 @@
-h1 {
-  color: skyblue;
+.category {
+  font-style: italic;
 }
 
 .card {
@@ -52,7 +52,7 @@ h1 {
 .card .details .center h1 {
   margin: 0;
   padding: 0;
-  color: #ff3636;
+  color: #113e66;
   line-height: 20px;
   font-size: 20px;
   text-transform: uppercase;

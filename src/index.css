@@ -1,6 +1,26 @@
 #brand-logo {
-	font-size: 2.5em;
-	text-decoration: .15em dotted skyblue underline;
+
+	font-size: 2.75em;
+	text-decoration: .15em dotted #21a8d8 underline;
+	
+}
+.search {
+	margin-top: -3vh;
+}
+.search-bar{
+	padding-top: 2vh;
+}
+
+.search-title {
+	color: whitesmoke;
+	margin-top: 3vh;
+	padding-top: 3vh;
+}
+
+.menu-title{
+	padding-top: 5vh;
+	font-size: 3em;
+	font-style: oblique; 
 }
 
 a.nav-link {
@@ -19,6 +39,7 @@ a.nav-link {
 
 .btn.btn-outline-light.btn-floating.m-1 {
 	padding: 0px 5px 0px 5px;
+	border-color: #21a8d8;
 
 }
 
@@ -38,7 +59,7 @@ a.nav-link {
 }
 
 .about {
- color:skyblue;
+ color: whitesmoke;
  font-weight: bold;
  font-size: 2em;
  line-height: 50px;
@@ -57,7 +78,7 @@ h1 {
 		'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #616364;
+	background-color: #9fa8c5;
 }
 
 code {

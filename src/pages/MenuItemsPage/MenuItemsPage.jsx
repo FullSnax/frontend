@@ -20,6 +20,12 @@ export default function MenuItemsPage() {
 
 	return (
 		<>
+			<div>
+				<h1 className='menu-title'>Entrées</h1>
+				</div>
+			<div>
+				<SearchBar />
+			</div>
 			<div className="menu-container">
 				{menuItems.map((meal, index) => {
 					return <MenuItemCard key={index} meal={meal} />;

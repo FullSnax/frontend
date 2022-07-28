@@ -12,9 +12,9 @@ export default function MenuItems({ meal }) {
 					<h1>
 						Entree
 						<br />
-						<span>Seafood</span>
+						<span className='category'>Seafood</span>
 					</h1>
-					<p>{meal.strMeal}</p>
+					<strong><p>{meal.strMeal}</p></strong>
 				</div>
 			</div>
 		</div>

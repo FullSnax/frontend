@@ -8,6 +8,7 @@ import {
 	faInstagram,
 	faLinkedin,
 	faTwitter,
+	faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 library.add(
 	faFacebookF,
@@ -15,7 +16,8 @@ library.add(
 	faInstagram,
 	faGithub,
 	faGoogle,
-	faLinkedin
+	faLinkedin,
+	faYoutube
 );
 
 export default function Footer() {
@@ -84,7 +86,7 @@ export default function Footer() {
 					>
 						<a className="icon-footer" href="#!">
 							<FontAwesomeIcon
-								icon={['fab', 'linkedin']}
+								icon={['fab', 'youtube']}
 							/>
 						</a>
 					</a>

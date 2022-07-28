@@ -15,7 +15,7 @@ export default function MyProfilePage() {
 <section className="vh-100">
   <div className="container py-5 h-100">
     <div className="row d-flex .justify-content-center .align-content-center h-100">
-      <div className="col col-lg-9 m-0 auto">
+      <div className="col col-lg-7 auto">
         <div className="card mb-1" style={{ borderRadius: '.5rem'}}>
           <div className="row g-0">
             <div className="col-md-4 gradient-custom text-center text-white"
@@ -23,7 +23,7 @@ export default function MyProfilePage() {
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                       alt="Avatar" className="img-fluid my-5" style={{ width: '80px' }} />
               <h5>Jessica Williams</h5>
-              <p>Premium Account</p>
+              <p>Premium <br /> Account</p>
              
             </div>
             <div className="col-md-8">
@@ -52,10 +52,12 @@ export default function MyProfilePage() {
                     <p className="text-muted">123 Main St, CA 33543</p>
                   </div>
                 </div>
-                <div className="d-flex justify-content-start">
-                <a className='icons' href='#!'><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
-                <a className='icons' href='#!'><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
-                <a className='icons' href="#!"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+                      <div className="d-flex justify-content-center p-5 m-4">
+                        <div className='profile-icon-container'>
+                <a className='profile-icons' href='#!'><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
+                <a className='profile-icons' href='#!'><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
+                          <a className='profile-icons' href="#!"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+                          </div>
                 </div>
               </div>
             </div>
