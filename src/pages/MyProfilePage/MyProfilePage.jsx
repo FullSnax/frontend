@@ -11,12 +11,12 @@ export default function MyProfilePage() {
   
   return (
     <>
-   <NavBar />
+  
 <section className="vh-100">
   <div className="container py-5 h-100">
-    <div className="row d-flex justify-content-center align-items-center h-100">
-      <div className="col col-lg-6 mb-4 mb-lg-0">
-        <div className="card mb-3" style={{ borderRadius: '.5rem'}}>
+    <div className="row d-flex .justify-content-center .align-content-center h-100">
+      <div className="col col-lg-9 m-0 auto">
+        <div className="card mb-1" style={{ borderRadius: '.5rem'}}>
           <div className="row g-0">
             <div className="col-md-4 gradient-custom text-center text-white"
               style={{ borderTopLeftRadius: ".5rem border-bottom-left-radius: .5rem"}}>
@@ -24,11 +24,11 @@ export default function MyProfilePage() {
                       alt="Avatar" className="img-fluid my-5" style={{ width: '80px' }} />
               <h5>Jessica Williams</h5>
               <p>Premium Account</p>
-              <i className="far fa-edit mb-5"></i>
+             
             </div>
             <div className="col-md-8">
               <div className="card-body p-4">
-                <h6>Profile</h6>
+                <h6 className='profile-title'>My Profile</h6>
                 <hr className="mt-0 mb-4" />
                 <div className="row pt-1">
                   <div className="col-6 mb-3">
@@ -40,7 +40,7 @@ export default function MyProfilePage() {
                     <p className="text-muted">123-456-789</p>
                   </div>
                 </div>
-                <h6>Information</h6>
+               
                 <hr className="mt-0 mb-4" />
                 <div className="row pt-1">
                   <div className="col-6 mb-3">
@@ -65,7 +65,7 @@ export default function MyProfilePage() {
     </div>
   </div>
       </section>
-      <Footer />
+      
 </>
     
   )

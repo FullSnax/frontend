@@ -1,5 +1,5 @@
 #logo {
-	font-size: 3em;
+	font-size: 2.5em;
 	text-decoration: 4px dotted skyblue underline;
 }
 
@@ -7,8 +7,9 @@
 	height: 2em;
 }
 
-.icon-footer {
-	
+.card-body.p-4 {
+ width: 80vh;
+ background-color: whitesmoke;
 }
 
 .btn.btn-outline-light.btn-floating.m-1 {

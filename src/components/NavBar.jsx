@@ -10,14 +10,12 @@ export default function NavBar() {
 				expand="xl"
 				bg="dark"
 				variant="dark"
-      >
-        {/* <Link to=""> */}
-							{/* <ReactBootStrap.Nav.Link href=""> */}
-				<ReactBootStrap.Navbar.Brand id="logo">
-					FullSnax
-            </ReactBootStrap.Navbar.Brand>
-          {/* </ReactBootStrap.Nav.Link> */}
-          {/* </Link> */}
+			>
+				<Link to="/">
+					<ReactBootStrap.Navbar.Brand id="logo" href="#">
+						FullSnax
+					</ReactBootStrap.Navbar.Brand>
+				</Link>
 				<ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
 					<ReactBootStrap.Nav className="mr-auto">
@@ -39,8 +37,11 @@ export default function NavBar() {
 							</ReactBootStrap.Nav.Link>
 						</Link>
 						<Link to="/orders">
-							<ReactBootStrap.Nav.Link href="#orders" eventKey={2}>
-								Orders
+							<ReactBootStrap.Nav.Link
+								href="#orders"
+								eventKey={2}
+							>
+								My Orders
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>

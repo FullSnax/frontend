@@ -6,7 +6,7 @@ export default function AboutPage() {
 	
 	return (
 		<>
-			<NavBar />
+			
 			<h1>About</h1>
 			<div className="about">
 				<p>
@@ -17,7 +17,7 @@ export default function AboutPage() {
 					Have a great day!
 				</p>
 			</div>
-			<Footer />
+			
 		</>
 	);
 }

@@ -16,7 +16,11 @@
   .icons {
     color: blue;
     font-size: 1.5em;
-    margin-left: 4vh;
-    padding: 3vh;
+    margin-left: 10vh;
+    padding: 5vh;
     display: block;
+  }
+
+  .profile-title {
+    font-size: 2em;
   }
