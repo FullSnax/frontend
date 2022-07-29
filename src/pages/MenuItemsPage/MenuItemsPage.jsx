@@ -1,6 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
+import { Navigate } from "react-router-dom";
+import AuthContext from "../../context/Authcontext";
 import axios from 'axios';
 import MenuItemCard from '../../components/MenuItemCard';
+import UserConfirm from '../../components/UserConfirm.jsx'
 import * as mealsApi from '../../utilities/mealsApi';
 import SearchBar from '../../components/SearchBar';
 import './MenuItemsPage.css';
@@ -18,6 +21,8 @@ export default function MenuItemsPage() {
 		getCategory();
 	}, []);
 
+const { user } = useContext(AuthContext);
+
 	return (
 		<>
 			<div>
@@ -26,6 +31,7 @@ export default function MenuItemsPage() {
 			<div>
 				<SearchBar />
 			</div>
+			<UserConfirm user={user} />
 			<div className="menu-container">
 				{menuItems.map((meal, index) => {
 					return <MenuItemCard key={index} meal={meal} />;

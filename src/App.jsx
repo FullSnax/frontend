@@ -5,7 +5,7 @@ import './App.css';
 import axios from 'axios';
 import { useState, useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom"
-import { AuthContext, AuthProvider } from "./context/AuthContext";
+import { AuthContext, AuthProvider } from "./context/Authcontext";
 import React, {Component} from "react";
 
 /*========================================
@@ -17,6 +17,7 @@ import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AboutPage from './pages/AboutPage/AboutPage';
+import LoginPage from './pages/LoginPage';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage/>} />
         </Routes>
       </AuthProvider>
       <Footer />
