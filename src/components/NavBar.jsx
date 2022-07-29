@@ -1,8 +1,15 @@
 import React from 'react';
 import * as ReactBootStrap from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import AuthContext from "../context/Authcontext"
+import { useContext } from 'react'
+import LoginPage from '../pages/LoginPage';
 
 export default function NavBar() {
+
+	const { user } = useContext(AuthContext);
+	
+
 	return (
 		<div className="App">
 			<ReactBootStrap.Navbar
@@ -12,11 +19,11 @@ export default function NavBar() {
 				variant="dark"
 			>
 				{/* <Link to="/"> */}
-				<ReactBootStrap.Nav.Link to="/">
+				{/* <ReactBootStrap.Nav.Link to="/"> */}
 					<ReactBootStrap.Navbar.Brand id="brand-logo" href="#about">
 						FullSnax
 						</ReactBootStrap.Navbar.Brand>
-						</ReactBootStrap.Nav.Link>
+						{/* </ReactBootStrap.Nav.Link> */}
 				{/* </Link> */}
 				<ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">

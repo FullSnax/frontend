@@ -21,16 +21,13 @@ import LoginPage from './pages/LoginPage';
 import Footer from './components/Footer';
 
 export default function App() {
-  
-  const [details, setDetails] = useState([])
-  const [user, setUser] = useState([])
-  
+
   return (
-    <div className='App'>
+    <main className='App'>
     <AuthProvider>
       <NavBar />
       <Routes>
-        <Route path="/profile" element={<MyProfilePage />} />
+        <Route path="/profile" element={<MyProfilePage  />} />
         <Route path="/menu" element={<MenuItemsPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -39,7 +36,7 @@ export default function App() {
         </Routes>
       </AuthProvider>
       <Footer />
-  </div>
+  </main>
   )
 }
 

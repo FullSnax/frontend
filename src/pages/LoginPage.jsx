@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthContext from "../context/Authcontext";
+import AuthContext from "../context/Authcontext"
+import MenuItemsPage from "./MenuItemsPage/MenuItemsPage";
 
 function LoginPage() {
   let navigate = useNavigate();
@@ -13,9 +14,10 @@ function LoginPage() {
     navigate('/menu')
   };
 
+  
   return (
     <div className="login">
-      <h1 className="text-center">Nova Lyfe</h1>
+      <h1 className="text-center">FullSnax</h1>
       <form onSubmit={handleSubmit} className="col-lg-6 offset-lg-3">
         <div className="form-group">
           <div>
@@ -35,6 +37,7 @@ function LoginPage() {
         </div>
         <button type="submit" className="btn btn-secondary">Login</button>
       </form>
+     
     </div>
   );
 };
