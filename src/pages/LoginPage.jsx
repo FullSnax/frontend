@@ -14,6 +14,7 @@ function LoginPage() {
     navigate('/menu')
   };
 
+  console.log(loginUser)
   
   return (
     <div className="login">
