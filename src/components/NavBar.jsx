@@ -18,36 +18,37 @@ export default function NavBar() {
 				bg="dark"
 				variant="dark"
 			>
-				{/* <Link to="/"> */}
-				{/* <ReactBootStrap.Nav.Link to="/"> */}
-					<ReactBootStrap.Navbar.Brand id="brand-logo" href="#about">
+				{/* <Link to="/home"> */}
+				<ReactBootStrap.Nav.Link to="/home">
+					<ReactBootStrap.Navbar.Brand id="brand-logo" className="nav-link" href='/home'>
 						FullSnax
 						</ReactBootStrap.Navbar.Brand>
-						{/* </ReactBootStrap.Nav.Link> */}
+						</ReactBootStrap.Nav.Link>
 				{/* </Link> */}
 				<ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
 					<ReactBootStrap.Nav className="mr-auto">
 						<Link to="/about">
-							<ReactBootStrap.Nav.Link href="#about">
+							<ReactBootStrap.Nav.Link className="nav-link" href="/about">
 								About
 							</ReactBootStrap.Nav.Link>
 						</Link>
 						<Link to="/menu">
-							<ReactBootStrap.Nav.Link href="#menu">
+							<ReactBootStrap.Nav.Link className="nav-link" href="/menu">
 								Menu
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>
 					<ReactBootStrap.Nav>
 						<Link to="/profile">
-							<ReactBootStrap.Nav.Link href="#profile">
+							<ReactBootStrap.Nav.Link href="/profile">
 								View Profile
 							</ReactBootStrap.Nav.Link>
 						</Link>
 						<Link to="/orders">
 							<ReactBootStrap.Nav.Link
-								href="#orders"
+								className="nav-link"
+								href="/orders"
 								eventKey={2}
 							>
 								My Orders

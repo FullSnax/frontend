@@ -19,6 +19,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage/HomePage';
 
 export default function App() {
 
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage/>} />
+        <Route path="/home" element={<HomePage/>} />
         </Routes>
       <Footer />
       </AuthProvider>

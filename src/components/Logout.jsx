@@ -4,9 +4,8 @@ import AuthContext from '../context/Authcontext';
 import NavBar from './NavBar';
 
 export default function Logout() {
+	const { user, logoutUser } = useContext(AuthContext);
 
-  const { user,logoutUser } = useContext(AuthContext);
-  
 	return (
 		<div>
 			{user ? (
@@ -14,13 +13,10 @@ export default function Logout() {
 					<Link to="/login">
 						<h1>Protected</h1>
 					</Link>
-          <button onClick={logoutUser}>Logout</button>
-          
-         
+					<button onClick={logoutUser}>Logout</button>
 				</>
 			) : (
 				<>
-					
 					<Link to="/login">
 						<h1 className="navbar-nav me-auto mb-2 mb-lg-0">
 							Login
