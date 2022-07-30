@@ -4,10 +4,15 @@ import Footer from '../../components/Footer'
 import './MyProfilePage.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import AuthContext from "../../context/Authcontext"
+import { useContext } from 'react'
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 library.add(faFacebookF, faTwitter, faInstagram);
 
 export default function MyProfilePage() {
+  
+  const { user } = useContext(AuthContext);
+  console.log(user)
   
   return (
     <>

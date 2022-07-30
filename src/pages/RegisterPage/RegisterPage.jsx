@@ -16,11 +16,11 @@ function RegisterPage() {
 
   return (
     <div className="signup">
-        <h1 className="text-center">MyRecords Registration</h1>
+        <h1 className="text-center">Register Account</h1>
         <form onSubmit={handleSubmit} className="col-lg-6 offset-lg-3">
         <h1>Registration</h1>
         <hr />
-        <div class="form-group">
+        <div className="form-group">
             <div>
                 <label htmlFor="username">Username</label>
             </div>
@@ -32,7 +32,7 @@ function RegisterPage() {
                 required
             />
         </div>
-        <div class="form-group">
+        <div className="form-group">
             <div>
                 <label htmlFor="password">Password</label>
             </div>
@@ -44,7 +44,7 @@ function RegisterPage() {
                 required
             />
         </div>
-        <div class="form-group">
+        <div className="form-group">
             <label htmlFor="confirm-password">Confirm Password</label>
             <input
                 type="password"

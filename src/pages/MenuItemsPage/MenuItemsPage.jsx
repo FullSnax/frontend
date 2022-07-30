@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Navigate } from "react-router-dom";
-import AuthContext from "../../context/Authcontext";
+import AuthContext from "../../context/Authcontext"
 import axios from 'axios';
 import MenuItemCard from '../../components/MenuItemCard';
 import * as mealsApi from '../../utilities/mealsApi';
@@ -20,8 +20,7 @@ export default function MenuItemsPage() {
 		getCategory();
 	}, []);
 
-	// const { user } = useContext(AuthContext);
-  // console.log(user)
+	
 
 	return (
 		<>

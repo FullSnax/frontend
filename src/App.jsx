@@ -17,14 +17,14 @@ import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import AboutPage from './pages/AboutPage/AboutPage';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 import Footer from './components/Footer';
 
 export default function App() {
 
   return (
     <main className='App'>
-    <AuthProvider>
+      <AuthProvider>
       <NavBar />
       <Routes>
         <Route path="/profile" element={<MyProfilePage  />} />
@@ -34,8 +34,8 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage/>} />
         </Routes>
-      </AuthProvider>
       <Footer />
+      </AuthProvider>
   </main>
   )
 }

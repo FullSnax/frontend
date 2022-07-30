@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthContext from "../context/Authcontext"
-import MenuItemsPage from "./MenuItemsPage/MenuItemsPage";
+import AuthContext from "../../context/Authcontext"
+import MenuItemsPage from "../MenuItemsPage/MenuItemsPage";
 
 function LoginPage() {
   let navigate = useNavigate();
@@ -14,8 +14,6 @@ function LoginPage() {
     navigate('/menu')
   };
 
-  console.log(loginUser)
-  
   return (
     <div className="login">
       <h1 className="text-center">FullSnax</h1>

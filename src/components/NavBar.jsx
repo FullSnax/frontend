@@ -3,12 +3,10 @@ import * as ReactBootStrap from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AuthContext from "../context/Authcontext"
 import { useContext } from 'react'
-import LoginPage from '../pages/LoginPage';
+import LoginPage from '../pages/LoginPage/LoginPage';
 
 export default function NavBar() {
 
-	const { user } = useContext(AuthContext);
-	
 
 	return (
 		<div className="App">
@@ -54,6 +52,7 @@ export default function NavBar() {
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>
+					
 				</ReactBootStrap.Navbar.Collapse>
 			</ReactBootStrap.Navbar>
 		</div>
