@@ -17,17 +17,18 @@ function LoginPage() {
 
   return (
     <div className="login">
-      <h1 className="text-center">FullSnax</h1>
-      <form onSubmit={handleSubmit} className="col-lg-6 offset-lg-3">
+      <h1 className="text-center m-5">Sign in</h1>
+      <form onSubmit={handleSubmit} className="col-lg-6 offset-lg-3 p-1">
+      <hr />
         <div className="form-group">
           <div>
-            <label htmlFor="username"><h2>Username</h2></label>
+            <label htmlFor="username"><h6>Username</h6></label>
           </div>
           <input type="text" id="username" placeholder="Enter Username" />
         </div>
-        <div className="form-group">
+        <div className="form-group p-4">
           <div>
-            <label htmlFor="password"><h2>Password</h2></label>
+            <label htmlFor="password"><h6>Password</h6></label>
           </div>
           <input 
             type="password" 
@@ -35,7 +36,7 @@ function LoginPage() {
             placeholder="Enter Password" 
           />
         </div>
-        <button type="submit" className="btn btn-secondary">Login</button>
+        <button type="submit" className="btn btn-dark">Login</button>
       </form>
      
     </div>

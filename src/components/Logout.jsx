@@ -15,19 +15,29 @@ export default function Logout() {
 					</Link>
 					<button onClick={logoutUser}>Logout</button>
 				</>
-			) : (
-				<>
-					<Link to="/login">
-						<h1 className="navbar-nav me-auto mb-2 mb-lg-0">
-							Login
-						</h1>
-					</Link>
-					<Link to="/register">
-						<h1 className="navbar-nav me-auto mb-2 mb-lg-0">
-							Register
-						</h1>
-					</Link>
-				</>
+      ) : (
+          // <div id='log-reg'>
+          <><>
+            
+            <Link to="/login">
+              <div className="navbar-nav me-auto mt-0">
+                <h6 id="log-link">
+                  Login
+                </h6>
+              </div>
+              </Link>
+              <br />
+          </><>
+              <Link to="/register">
+                <div className="navbar-nav me-auto mt-0">
+                  <h6 id="reg-link">
+                    Register
+                  </h6>
+                </div>
+              </Link>
+            </></>
+       
+      // </div>
 			)}
 		</div>
 	);

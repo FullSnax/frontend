@@ -1,14 +1,33 @@
 #brand-logo {
+	font-size: 2.5em;
+	text-decoration: 0.15em dotted #21a8d8 underline;
+}
 
-	font-size: 2.75em;
-	text-decoration: .15em dotted #21a8d8 underline;
-	
+#log-reg {
+	margin-top: 1vh;
+	margin-left: 50vh;
+	color: whitesmoke;
+}
+
+#log-link {
+	margin-top: 0vh;
+	margin-left: 120vh;
+
+	color: whitesmoke;
+	position: relative;
+}
+
+#reg-link {
+	margin-top: -3vh;
+	margin-left: 120vh;
+	color: whitesmoke;
+	position: relative;
 }
 
 .search {
 	margin-top: -3vh;
 }
-.search-bar{
+.search-bar {
 	padding-top: 2vh;
 }
 
@@ -18,20 +37,21 @@
 	padding-top: 3vh;
 }
 
-.menu-title{
+.menu-title {
 	padding-top: 5vh;
 	font-size: 3em;
-	font-style: oblique; 
+	font-style: oblique;
 }
 
 a.nav-link {
 	text-decoration: none;
-	color: whitesmoke
+	color: whitesmoke;
 }
 
-.welcome {
-	color:whitesmoke;
-	margin-left: 65%;
+#welcome {
+	color: whitesmoke;
+	margin-left: 3vh;
+	margin-top: 1vh;
 }
 
 #footer {
@@ -39,43 +59,40 @@ a.nav-link {
 }
 
 .card-body.p-4 {
- width: 80vh;
- background-color: whitesmoke;
+	width: 80vh;
+	background-color: whitesmoke;
 }
 
 .btn.btn-outline-light.btn-floating.m-1 {
 	padding: 0px 5px 0px 5px;
 	border-color: #21a8d8;
-
 }
 
 .text-center.p-3 {
 	position: absolute;
 	margin-top: -3.5vh;
 	margin-left: 85%;
-	
 }
 
 .mb-4 {
 	padding: 0px;
 	position: absolute;
 	margin-left: -32vh;
-	margin-top: -2.5vh
-
+	margin-top: -2.5vh;
 }
 
 .about {
- color: whitesmoke;
- font-weight: bold;
- font-size: 2em;
- line-height: 50px;
- margin-top: 20vh;
+	color: whitesmoke;
+	font-weight: bold;
+	font-size: 2em;
+	line-height: 50px;
+	margin-top: 20vh;
 }
 
 h1 {
- font-size: 2.5em;
- color: whitesmoke;
-} 
+	font-size: 2.5em;
+	color: whitesmoke;
+}
 
 #body {
 	margin: 0;

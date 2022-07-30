@@ -55,8 +55,14 @@ export default function NavBar() {
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>
-					<h5 className='welcome'>{user ? `Welcome, ${user.username}` : "Please sign in or register!" }</h5>
-					<Logout />
+					
+					<h6 id='welcome'>{user ?
+						`Welcome, ${user.username}` : "Please sign in or register"}
+					</h6>
+					
+					<div>
+						<Logout />
+						</div>
 				</ReactBootStrap.Navbar.Collapse>
 			</ReactBootStrap.Navbar>
 		</div>
