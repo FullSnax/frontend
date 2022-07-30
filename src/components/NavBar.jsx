@@ -8,7 +8,7 @@ import LoginPage from '../pages/LoginPage/LoginPage';
 export default function NavBar() {
 
 	const { user } = useContext(AuthContext);
-  console.log(user.username)
+  // console.log(user.username)
 
 	return (
 		<div className="App">
@@ -54,7 +54,7 @@ export default function NavBar() {
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>
-					<h5 className='welcome'>Welcome, {user.username}!</h5>
+					<h5 className='welcome'>Welcome, {user.email}!</h5>
 				</ReactBootStrap.Navbar.Collapse>
 			</ReactBootStrap.Navbar>
 		</div>

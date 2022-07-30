@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const loginUser = async (username, password, email) => {
+  const loginUser = async (username, password) => {
     const response = await fetch("http://localhost:8000/api/token/obtain/", {
       method: "POST",
       headers: {
@@ -32,7 +32,6 @@ export const AuthProvider = ({ children }) => {
       body: JSON.stringify({
         username,
         password,
-        email
       })
     });
     const data = await response.json();
