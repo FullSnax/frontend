@@ -9,35 +9,28 @@ export default function Logout() {
 	return (
 		<div>
 			{user ? (
+				<button id="logout-btn" className="btn btn-light" onClick={logoutUser}>Logout</button>
+			) : (
+				// <div id='log-reg'>
 				<>
-					<Link to="/login">
-						<h1>Protected</h1>
-					</Link>
-					<button onClick={logoutUser}>Logout</button>
+					<>
+						<Link to="/login">
+							<div className="navbar-nav me-auto mt-0">
+								<h6 id="log-link">Login</h6>
+							</div>
+						</Link>
+						<br />
+					</>
+					<>
+						<Link to="/register">
+							<div className="navbar-nav me-auto mt-0">
+								<h6 id="reg-link">Register</h6>
+							</div>
+						</Link>
+					</>
 				</>
-      ) : (
-          // <div id='log-reg'>
-          <><>
-            
-            <Link to="/login">
-              <div className="navbar-nav me-auto mt-0">
-                <h6 id="log-link">
-                  Login
-                </h6>
-              </div>
-              </Link>
-              <br />
-          </><>
-              <Link to="/register">
-                <div className="navbar-nav me-auto mt-0">
-                  <h6 id="reg-link">
-                    Register
-                  </h6>
-                </div>
-              </Link>
-            </></>
-       
-      // </div>
+
+				// </div>
 			)}
 		</div>
 	);

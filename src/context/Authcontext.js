@@ -74,7 +74,7 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
     localStorage.removeItem("authTokens");
     {console.log(`user has been logged out`)}
-    navigate("/");
+    navigate("/login");
   };
 
   const contextData = {

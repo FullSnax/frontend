@@ -12,9 +12,16 @@
 #log-link {
 	margin-top: 0vh;
 	margin-left: 120vh;
-
 	color: whitesmoke;
 	position: relative;
+}
+
+#logout-btn {
+	margin-top: 0vh;
+	margin-left: 125vh;
+	font-weight: bold;
+	color: #21a8d8;
+	border-radius: 1em;
 }
 
 #reg-link {
