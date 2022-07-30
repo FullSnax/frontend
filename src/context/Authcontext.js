@@ -21,15 +21,18 @@ export const AuthProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const loginUser = async (username, password) => {
-    const response = await fetch("http://localhost:8000/api/token/", {
+  const loginUser = async (username, password, email) => {
+    const response = await fetch("http://localhost:8000/api/token/obtain/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
-      },
+        'Authorization': "JWT " + localStorage.getItem('access_token'),
+        'Content-Type': 'application/json',
+        'accept': 'application/json'
+    },
       body: JSON.stringify({
         username,
-        password
+        password,
+        email
       })
     });
     const data = await response.json();
@@ -39,21 +42,25 @@ export const AuthProvider = ({ children }) => {
       setUser(jwt_decode(data.access));
       localStorage.setItem("authTokens", JSON.stringify(data));
       navigate("/menu");
+      console.log("NICEEE " + username)
     } else {
       alert("Something went wrong!");
     }
   };
 
-  const registerUser = async (username, password, password2) => {
-    const response = await fetch("http://localhost:8000/api/register/", {
+  const registerUser = async (username, password, password2, email) => {
+    const response = await fetch("http://localhost:8000/api/user/create/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
-      },
+        'Authorization': "JWT " + localStorage.getItem('access_token'),
+        'Content-Type': 'application/json',
+        'accept': 'application/json'
+    },
       body: JSON.stringify({
         username,
         password,
-        password2
+        password2,
+        email
       })
     });
     if (response.status === 201) {

@@ -28,6 +28,11 @@ a.nav-link {
 	color: whitesmoke
 }
 
+.welcome {
+	color:whitesmoke;
+	margin-left: 5vh;
+}
+
 #footer {
 	height: 2em;
 }

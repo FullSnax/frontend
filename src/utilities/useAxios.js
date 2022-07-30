@@ -5,36 +5,40 @@ import dayjs from "dayjs";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
-const baseURL = "http://localhost:8000/api";
+const baseURL = 'http://localhost:8000/api/'
 
-const useAxios = () => {
-  const { authTokens, setUser, setAuthTokens } = useContext(AuthContext);
 
-  const axiosInstance = axios.create({
-    baseURL,
-    headers: { Authorization: `Bearer ${authTokens?.access}` }
-  });
+const axiosInstance = axios.create({
+    baseURL: 'http://localhost:8000/api/',
+    timeout: 5000,
+    headers: {
+        'Authorization': "JWT " + localStorage.getItem('access_token'),
+        'Content-Type': 'application/json',
+        'accept': 'application/json'
+    }
+});
+axiosInstance.interceptors.response.use(
+    response => response,
+    async error => {
+      const originalRequest = error.config;
+      
+      if (error.response.status === 401 && error.response.statusText === "Unauthorized") {
+          const refresh_token = localStorage.getItem('refresh_token');
 
-  axiosInstance.interceptors.request.use(async req => {
-    const user = jwt_decode(authTokens.access);
-    const isExpired = dayjs.unix(user.exp).diff(dayjs()) < 1;
+          try {
+          const response = await axiosInstance
+            .post('/token/refresh/', { refresh: refresh_token });
+          localStorage.setItem('access_token', response.data.access);
+          localStorage.setItem('refresh_token', response.data.refresh);
 
-    if (!isExpired) return req;
-
-    const response = await axios.post(`${baseURL}/token/refresh/`, {
-      refresh: authTokens.refresh
-    });
-
-    localStorage.setItem("authTokens", JSON.stringify(response.data));
-
-    setAuthTokens(response.data);
-    setUser(jwt_decode(response.data.access));
-
-    req.headers.Authorization = `Bearer ${response.data.access}`;
-    return req;
-  });
-
-  return axiosInstance;
-};
-
-export default useAxios;
+          axiosInstance.defaults.headers['Authorization'] = "JWT " + response.data.access;
+          originalRequest.headers['Authorization'] = "JWT " + response.data.access;
+          return await axiosInstance(originalRequest);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      return Promise.reject(error);
+  }
+);
+export default axiosInstance

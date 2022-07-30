@@ -11,8 +11,7 @@ library.add(faFacebookF, faTwitter, faInstagram);
 
 export default function MyProfilePage() {
   
-  const { user } = useContext(AuthContext);
-  console.log(user)
+  
   
   return (
     <>

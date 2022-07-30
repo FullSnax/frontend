@@ -5,11 +5,12 @@ function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
+  const [email, setEmail] = useState("");
   const { registerUser } = useContext(AuthContext);
 
   const handleSubmit = async e => {
     e.preventDefault();
-    registerUser(username, password, password2);
+    registerUser(username, password, password2, email);
   };
 
  
@@ -31,7 +32,8 @@ function RegisterPage() {
                 placeholder="Username"
                 required
             />
-        </div>
+              </div>
+              
         <div className="form-group">
             <div>
                 <label htmlFor="password">Password</label>
@@ -52,7 +54,19 @@ function RegisterPage() {
                 onChange={e => setPassword2(e.target.value)}
                 placeholder="Confirm Password"
                 required
-            />
+                  />
+        <div className="form-group">
+            <div>
+                <label htmlFor="password">Password</label>
+            </div>
+            <input
+                type="email"
+                id="email"
+                onChange={e => setEmail(e.target.value)}
+                placeholder="Email"
+                required
+                      />
+                      </div>
             <p>{password2 !== password ? "Passwords do not match" : ""}</p>
         </div>
         <button>Register</button>
