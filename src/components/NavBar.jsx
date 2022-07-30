@@ -3,11 +3,11 @@ import * as ReactBootStrap from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AuthContext from "../context/Authcontext"
 import { useContext } from 'react'
-import LoginPage from '../pages/LoginPage/LoginPage';
+import Logout from './Logout';
 
 export default function NavBar() {
 
-	const { user } = useContext(AuthContext);
+	const { user, logoutUser } = useContext(AuthContext);
   // console.log(user.username)
 
 	return (
@@ -54,7 +54,8 @@ export default function NavBar() {
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>
-					<h5 className='welcome'>Welcome, {user.email}!</h5>
+					<h5 className='welcome'>{user ? `Welcome, ${user.username}` : "Please sign in or register!" }</h5>
+					<Logout />
 				</ReactBootStrap.Navbar.Collapse>
 			</ReactBootStrap.Navbar>
 		</div>

@@ -11,7 +11,7 @@ function LoginPage() {
     const username = e.target.username.value;
     const password = e.target.password.value;
     username.length > 0 && loginUser(username, password);
-    console.log("this "+ user.password)
+    // console.log("this "+ user.username)
     navigate('/menu')
   };
 
