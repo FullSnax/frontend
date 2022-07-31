@@ -5,7 +5,7 @@ import './App.css';
 import axios from 'axios';
 import { useState, useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom"
-import { AuthContext, AuthProvider } from "./context/Authcontext";
+import { AuthContext, AuthProvider } from "./context/Authcontext"
 import React, {Component} from "react";
 
 /*========================================
@@ -21,7 +21,10 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage/HomePage';
 
+
 export default function App() {
+
+  
 
   return (
     <main className='App'>

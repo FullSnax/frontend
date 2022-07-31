@@ -7,11 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AuthContext from "../../context/Authcontext"
 import { useContext } from 'react'
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import userEvent from '@testing-library/user-event'
 library.add(faFacebookF, faTwitter, faInstagram);
 
 export default function MyProfilePage() {
   
-  
+  const { user } = useContext(AuthContext);
   
   return (
     <>
@@ -37,11 +38,11 @@ export default function MyProfilePage() {
                 <div className="row pt-1 mt-5 p-0">
                   <div className="col-6 mb-3">
                     <h6>Email</h6>
-                    <p className="text-muted">Jessica@gmail.com</p>
+                    <p className="text-muted">{user.username}</p>
                   </div>
                   <div className="col-6 mb-3">
                     <h6>Phone</h6>
-                    <p className="text-muted">123-456-789</p>
+                    <p className="text-muted">{user.phone_number}</p>
                   </div>
                 </div>
                
@@ -49,11 +50,11 @@ export default function MyProfilePage() {
                 <div className="row pt-1">
                   <div className="col-6 mb-3">
                     <h6>Member Since</h6>
-                    <p className="text-muted">2020</p>
+                    <p className="text-muted">{user.created_date}</p>
                   </div>
                   <div className="col-6 mb-3">
                     <h6>Address</h6>
-                    <p className="text-muted">123 Main St, CA 33543</p>
+                    <p className="text-muted">{user.address}, {user.country}</p>
                   </div>
                 </div>
                       <div className="d-flex justify-content-center p-5 m-4">

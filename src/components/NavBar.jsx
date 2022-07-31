@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import AuthContext from "../context/Authcontext"
 import { useContext } from 'react'
 import Logout from './Logout';
+import MyProfilePage from '../pages/MyProfilePage/MyProfilePage';
 
 export default function NavBar() {
 
 	const { user, logoutUser } = useContext(AuthContext);
-  // console.log(user.username)
+  <MyProfilePage user={user}/>
 
 	return (
 		<div className="App">
