@@ -27,7 +27,8 @@ export default function MyProfilePage() {
               style={{ borderTopLeftRadius: ".5rem border-bottom-left-radius: .5rem"}}>
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                       alt="Avatar" className="img-fluid my-5" style={{ width: '80px' }} />
-              <h5>Jessica Williams</h5>
+              <h5>{user.first_name}</h5>
+              <h5>{user.last_name}</h5>
               <p>Premium <br /> Account</p>
              
             </div>
@@ -38,7 +39,7 @@ export default function MyProfilePage() {
                 <div className="row pt-1 mt-5 p-0">
                   <div className="col-6 mb-3">
                     <h6>Email</h6>
-                    <p className="text-muted">{user.username}</p>
+                    <p className="text-muted">{user.email}</p>
                   </div>
                   <div className="col-6 mb-3">
                     <h6>Phone</h6>
@@ -49,8 +50,8 @@ export default function MyProfilePage() {
                 <hr className="mt-0 mb-4" />
                 <div className="row pt-1">
                   <div className="col-6 mb-3">
-                    <h6>Member Since</h6>
-                    <p className="text-muted">{user.created_date}</p>
+                    <h6>Special Instructions</h6>
+                    <p className="text-muted">{user.instructions}</p>
                   </div>
                   <div className="col-6 mb-3">
                     <h6>Address</h6>
@@ -61,7 +62,7 @@ export default function MyProfilePage() {
                         <div className='profile-icon-container'>
                 <a className='profile-icons' href='#!'><FontAwesomeIcon icon={['fab', 'facebook-f']} /></a>
                 <a className='profile-icons' href='#!'><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
-                          <a className='profile-icons' href="#!"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+                <a className='profile-icons' href="#!"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
                           </div>
                 </div>
               </div>
