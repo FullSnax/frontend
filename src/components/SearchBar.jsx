@@ -76,16 +76,16 @@ export default function SearchPage() {
 		);
 	} else {
 		return (
-			<form action="" onSubmit={submitQuery}>
+			<>
 				<div className="input-group justify-content-center">
-					<div>
+					<form action="" onSubmit={submitQuery}>
 						<div className="form-outline d-flex">
 							<input
 								type="text"
 								id="form1"
 								name="search"
 								value={selectedSearch}
-								className="form-control d-inline-block"
+								className="form-control d-inline-flex"
 								placeholder="Search..."
 								onChange={handleSearchChange}
 							></input>
@@ -93,7 +93,7 @@ export default function SearchPage() {
 								<button
 									type="submit"
 									onSubmit={submitQuery}
-									className="btn btn-dark"
+									className="btn btn-info"
 								>
 									<i class="fa fa-search"></i>
 								</button>
@@ -115,20 +115,14 @@ export default function SearchPage() {
 								</select>
 							</div>
 						</div>
-					</div>
-
-						</div>
-					<div className="menu-container">
-						{queryAppend.map((meal, index) => {
-							return (
-								<MenuItemSearch
-									key={index}
-									meal={meal}
-									/>
-									);
-								})}
-								</div>
-			</form>
+					</form>
+				</div>
+				<div className="menu-container">
+					{queryAppend.map((meal, index) => {
+						return <MenuItemSearch key={index} meal={meal} />;
+					})}
+				</div>
+			</>
 		);
 	}
 }

@@ -9,3 +9,7 @@ export function getDisplayItems() {
 export function getCollection() {
     return sendRequest(BASE_URL)
 }
+
+export function getDetail(id) {
+    return sendRequest(`${BASE_URL}menuitems/${id}`)
+}

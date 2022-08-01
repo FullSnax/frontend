@@ -8,7 +8,7 @@ export default function DisplayItems({ demo }) {
 		<>
 			<div className="card">
 			<div className="image">
-				<img src={demo.image2} />
+				<img src={demo.image} />
 			</div>
 			<div className="details">
 				<div className="center">
@@ -19,10 +19,15 @@ export default function DisplayItems({ demo }) {
             <strong><p>{demo.name}</p></strong>
 						<p>{demo.description}</p>
 						<p>$ {demo.price}</p>
+			<button type="button" class="btn btn-info btn-sm">
+         <strong>
+            Add to Order
+            </strong>
+      </button>
            
 				</div>
 			</div>
-		</div>
+			</div>
 		</>
 	);
 }
