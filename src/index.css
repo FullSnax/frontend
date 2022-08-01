@@ -50,6 +50,14 @@
 	font-style: oblique;
 }
 
+.menu-container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	padding-bottom: 8vh;
+	margin-top: 1vh;
+}
+
 a.nav-link {
 	text-decoration: none;
 	color: whitesmoke;

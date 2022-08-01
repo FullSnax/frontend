@@ -29,9 +29,9 @@ export default function MenuItemsPage() {
 			</div>
 
 			<div className="menu-container">
-				{menuItems.map((meal, index) => {
+				{/* {menuItems.map((meal, index) => {
 					return <MenuItemCard key={index} meal={meal} />;
-				})}
+				})} */}
 			</div>
 		</>
 	);

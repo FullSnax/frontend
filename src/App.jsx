@@ -20,6 +20,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage/HomePage';
+import MenuItemSearch from './components/MenuItemSearch';
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
       <Routes>
         <Route path="/profile" element={<MyProfilePage  />} />
         <Route path="/menu" element={<MenuItemsPage />} />
+        <Route path="/category" element={<MenuItemSearch />} />
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
