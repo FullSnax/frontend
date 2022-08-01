@@ -12,7 +12,6 @@ import React, {Component} from "react";
         Import Pages
 ========================================*/
 import NavBar from './components/NavBar';
-import MenuItemsPage from './pages/MenuItemsPage/MenuItemsPage';
 import MyProfilePage from './pages/MyProfilePage/MyProfilePage';
 import MyOrdersPage from './pages/MyOrdersPage/MyOrdersPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
@@ -20,7 +19,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage/HomePage';
-import MenuItemSearch from './components/MenuItemSearch';
+import SearchPage from './components/SearchBar';
 
 
 export default function App() {
@@ -33,8 +32,7 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/profile" element={<MyProfilePage  />} />
-        <Route path="/menu" element={<MenuItemsPage />} />
-        <Route path="/category" element={<MenuItemSearch />} />
+        <Route path="/menu" element={<SearchPage />} />
         <Route path="/orders" element={<MyOrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />

@@ -13,7 +13,7 @@ library.add(faFacebookF, faTwitter, faInstagram);
 export default function MyProfilePage() {
   
   const { user } = useContext(AuthContext);
-  console.log(user.email)
+  // console.log(user.email)
   
   return (
     <>
@@ -40,11 +40,11 @@ export default function MyProfilePage() {
                 <div className="row pt-1 mt-5 p-0">
                   <div className="col-6 mb-3">
                     <h6>Email</h6>
-                    <p className="text-muted">{user.email}</p>
+                    <p className="text">{user.email}</p>
                   </div>
                   <div className="col-6 mb-3">
                     <h6>Phone</h6>
-                    <p className="text-muted">{user.phone_number}</p>
+                    <p className="text">{user.phone_number}</p>
                   </div>
                 </div>
                
@@ -52,11 +52,11 @@ export default function MyProfilePage() {
                 <div className="row pt-1">
                   <div className="col-6 mb-3">
                     <h6>Special Instructions</h6>
-                    <p className="text-muted">{user.instructions}</p>
+                    <p className="text">{user.instructions}</p>
                   </div>
                   <div className="col-6 mb-3">
                     <h6>Address</h6>
-                    <p className="text-muted">{user.address}, {user.country}</p>
+                    <p className="text">{user.address}, {user.country}</p>
                   </div>
                 </div>
                       <div className="d-flex justify-content-center p-5 m-4">

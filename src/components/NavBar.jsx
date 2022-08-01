@@ -46,13 +46,13 @@ export default function NavBar() {
 								View Profile
 							</ReactBootStrap.Nav.Link>
 						</Link>
-						<Link to="/orders">
+						<Link to="/home">
 							<ReactBootStrap.Nav.Link
 								className="nav-link"
-								href="/orders"
+								href="/home"
 								eventKey={2}
 							>
-								My Orders
+								Home
 							</ReactBootStrap.Nav.Link>
 						</Link>
 					</ReactBootStrap.Nav>

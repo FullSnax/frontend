@@ -9,9 +9,14 @@ export default function Logout() {
 	return (
 		<div>
 			{user ? (
-				<button id="logout-btn" className="btn btn-light" onClick={logoutUser}>Logout</button>
+				<button
+					id="logout-btn"
+					className="btn btn-light"
+					onClick={logoutUser}
+				>
+					Logout
+				</button>
 			) : (
-				// <div id='log-reg'>
 				<>
 					<>
 						<Link to="/login">
@@ -29,8 +34,6 @@ export default function Logout() {
 						</Link>
 					</>
 				</>
-
-				// </div>
 			)}
 		</div>
 	);

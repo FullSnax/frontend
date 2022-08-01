@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/Authcontext"
-import MenuItemsPage from "../MenuItemsPage/MenuItemsPage";
 
 function LoginPage() {
   let navigate = useNavigate();
