@@ -1,9 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import * as mealsApi from '../utilities/mealsApi';
 import MenuItemSearch from './MenuItemSearch';
-import { useNavigate } from 'react-router-dom';
-import { createContext } from 'react';
-import { Link } from 'react-router-dom';
+import './MenuItemSearch.css';
 
 export default function SearchPage() {
 	const [queryAppend, setQueryAppend] = useState([]);
@@ -18,7 +16,7 @@ export default function SearchPage() {
 			selectedSearch
 		);
 		setQueryAppend(returnedData.meals);
-		// console.log(returnedData.meals)
+		console.log(queryAppend);
 	}
 
 	function handleParamChange(event) {
@@ -36,14 +34,23 @@ export default function SearchPage() {
 		return (
 			<>
 				<div>
-					<div
-						className="package-add mt-4 text-lg px-2"
-						onSubmit={submitQuery}
-					>
-						<form action="">
+					<div className="input-group">
+						<form action="" onSubmit={submitQuery}>
 							<div>
-								<label className="px-2 ">
-									Search By
+								<input
+									type="text"
+									name="search"
+									value={selectedSearch}
+									placeholder="Search..."
+									onChange={handleSearchChange}
+								></input>
+							</div>
+							<div>
+								<label
+									className="form-label"
+									htmlFor="form1"
+								>
+									Search
 								</label>
 							</div>
 							<div>
@@ -58,17 +65,9 @@ export default function SearchPage() {
 									<option value="a">Area</option>
 								</select>
 							</div>
+
 							<div>
-								<input
-									type="text"
-									name="search"
-									value={selectedSearch}
-									placeholder="Search..."
-									onChange={handleSearchChange}
-								></input>
-							</div>
-							<div>
-								<button type="submit">Search</button>
+								<button type="submit"></button>
 							</div>
 						</form>
 					</div>
@@ -77,44 +76,59 @@ export default function SearchPage() {
 		);
 	} else {
 		return (
-			<>
-				<div className="package-add mt-4 text-lg px-2">
-					<form action="" onSubmit={submitQuery}>
-						<div>
-							<label className="px-2 ">Search By</label>
-						</div>
-						<div>
-							<select
-								name="param"
-								className="px-8 mr-4 bg-slate-300 ring-1 ring-slate-800"
-								value={selectedParam}
-								onChange={handleParamChange}
-							>
-								<option value="c">Category</option>
-								<option value="i">Ingredient</option>
-								<option value="a">Area</option>
-							</select>
-						</div>
-						<div>
+			<form action="" onSubmit={submitQuery}>
+				<div className="input-group justify-content-center">
+					<div>
+						<div className="form-outline d-flex">
 							<input
 								type="text"
+								id="form1"
 								name="search"
 								value={selectedSearch}
+								className="form-control d-inline-block"
 								placeholder="Search..."
 								onChange={handleSearchChange}
 							></input>
+							<span class="input-group-btn d-inline-block">
+								<button
+									type="submit"
+									onSubmit={submitQuery}
+									className="btn btn-dark"
+								>
+									<i class="fa fa-search"></i>
+								</button>
+							</span>
+
+							<div>
+								<select
+									name="param"
+									className="form-select form-select-sm"
+									style={{ width: 'auto ' }}
+									value={selectedParam}
+									onChange={handleParamChange}
+								>
+									<option value="c">Category</option>
+									<option value="i">
+										Ingredient
+									</option>
+									<option value="a">Area</option>
+								</select>
+							</div>
 						</div>
-						<div>
-							<button type="submit">Search</button>
+					</div>
+
 						</div>
-					</form>
-				</div>
-				<div className="menu-container">
-					{queryAppend.map((meal, index) => {
-						return <MenuItemSearch key={index} meal={meal} />;
-					})}
-				</div>
-			</>
+					<div className="menu-container">
+						{queryAppend.map((meal, index) => {
+							return (
+								<MenuItemSearch
+									key={index}
+									meal={meal}
+									/>
+									);
+								})}
+								</div>
+			</form>
 		);
 	}
 }

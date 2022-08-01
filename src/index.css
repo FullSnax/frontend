@@ -55,7 +55,7 @@
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
 	padding-bottom: 8vh;
-	margin-top: 1vh;
+	margin-top: 10vh;
 }
 
 a.nav-link {
