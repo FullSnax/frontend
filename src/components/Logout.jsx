@@ -11,7 +11,7 @@ export default function Logout() {
 			{user ? (
 				<button
 					id="logout-btn"
-					className="btn btn-light"
+					className="btn-hover color-1"
 					onClick={logoutUser}
 				>
 					Logout

@@ -55,14 +55,14 @@ export default function SearchPage() {
 							</div>
 							<div>
 								<select
-									className="px-8 mr-4 bg-slate-300 ring-1 ring-slate-800"
+									className="dropdown"
 									onChange={handleParamChange}
 								>
 									<option value="c">Category</option>
 									<option value="i">
 										Ingredient
 									</option>
-									<option value="a">Area</option>
+									<option value="a">Region</option>
 								</select>
 							</div>
 
@@ -77,7 +77,7 @@ export default function SearchPage() {
 	} else {
 		return (
 			<>
-				<div className="input-group justify-content-center">
+				<div className="input-group justify-content-center mt-5 p-5">
 					<form action="" onSubmit={submitQuery}>
 						<div className="form-outline d-flex">
 							<input
@@ -89,20 +89,22 @@ export default function SearchPage() {
 								placeholder="Search..."
 								onChange={handleSearchChange}
 							></input>
-							<span class="input-group-btn d-inline-block">
+							<span className="input-group-btn d-inline-block">
 								<button
 									type="submit"
+									id="mag-glass"
 									onSubmit={submitQuery}
-									className="btn btn-info"
+									className="btn btn-info bg-dark"
 								>
-									<i class="fa fa-search"></i>
+									<i className="fa fa-search"></i>
 								</button>
 							</span>
-
-							<div>
+					
+							<div id="filter">
 								<select
 									name="param"
-									className="form-select form-select-sm"
+									id="search-filter"
+									className="form-select-sm p-2 bg-dark"
 									style={{ width: 'auto ' }}
 									value={selectedParam}
 									onChange={handleParamChange}
@@ -111,7 +113,7 @@ export default function SearchPage() {
 									<option value="i">
 										Ingredient
 									</option>
-									<option value="a">Area</option>
+									<option value="a">Region</option>
 								</select>
 							</div>
 						</div>

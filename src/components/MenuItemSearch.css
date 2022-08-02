@@ -10,8 +10,29 @@
 	width: 40vh;
 	background: #000;
 	margin: 2vh;
- 
+}
+
+#filter {
+	position: absolute;
+	margin-top: 2vh;
+	font-weight: bold;
+	padding: 6vh;
+}
+
+#search-filter {
+	color: whitesmoke;
+	font-weight: bold;
+	border-radius: 10px;
+	text-align: center;
+	border-color: #21a8d8;
+	border-width: 3px;
 	
+
+}
+
+#mag-glass {
+	color: whitesmoke;
+	border: 3px solid #21a8d8;
 }
 
 .card .image {
@@ -20,13 +41,10 @@
 	overflow: hidden;
 }
 
-
-
 .card .image img {
 	width: 100%;
 	transition: 0.5s;
 	aspect-ratio: 1 / 1;
- 
 }
 .card:hover .image img {
 	opacity: 0.5;
@@ -74,7 +92,7 @@
 	color: #262626;
 }
 
-.form-control{
-	display:inline;
-	width:50px;
-	}
+.form-control {
+	display: inline;
+	width: 50px;
+}

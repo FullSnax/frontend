@@ -18,7 +18,7 @@ export default function HomePage() {
 
 	return (
 			<>
-				<h1>Fan Favorites</h1>
+				<h1>Most Popular</h1>
 			<div className="menu-container">
 				{displayItems.map((demo, index) => {
 					return <DisplayItems key={index} demo={demo} />

@@ -58,7 +58,7 @@ export default function NavBar() {
 					</ReactBootStrap.Nav>
 					
 					<h6 id='welcome'>{user ?
-						`Welcome, ${user.username}` : "Please sign in or register"}
+						`Welcome, ${user.username} !` : "Please sign in or register"}
 					</h6>
 					
 					<div>

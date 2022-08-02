@@ -19,7 +19,7 @@ export default function DisplayItems({ demo }) {
             <strong><p>{demo.name}</p></strong>
 						<p>{demo.description}</p>
 						<p>$ {demo.price}</p>
-			<button type="button" class="btn btn-info btn-sm">
+			<button type="button" className="btn btn-info btn-sm">
          <strong>
             Add to Order
             </strong>
